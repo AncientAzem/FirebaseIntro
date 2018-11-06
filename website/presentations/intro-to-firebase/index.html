@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro to Firebase</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!-- Google Analytics -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128722543-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-128722543-1');
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Intro to Firebase</h1>
+					<img data-src="images/logo-logomark.svg" alt="Firebase Logo" width="220" height="301" style="height: 301px !important; width: 220px !important; box-shadow: none; border: none; background: none;">
+					<h3>Presented by Brenden Reeves</h3>
+				</section>
+				<section>
+						<h2>Looking for the presentation?</h2>
+						<p>
+							<small>Be sure to attend the SGF Web Dev's meeting on Wednesday November 7th at 6:30PM to learn what firebase is and how to use it in your web app today! Once the event begins you'll be able to find the slides here.</small>
+						</p>
+				</section>
+				<section>
+					<section>
+						<h2>Event Details:</h2>
+						<a href="https://www.meetup.com/SGF-Web-Devs/events/255555353/">
+							<img src="https://secure.meetupstatic.com/photos/event/8/4/1/c/highres_475473820.jpeg"/>
+						</a>
+					</section>
+					<section>
+						<h2>Unable to attend in person?</h2>
+						<p>
+							<small>We got you covered! The event will be stremed and archived on twitch. Just head on over to <a href="https://www.twitch.tv/sgfwebdevs">https://www.twitch.tv/sgfwebdevs</a> when the event starts.</small>
+						</p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro to Firebase</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/firebase.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Intro to Firebase</h1>
+					<img data-src="images/logo-logomark.svg" alt="Firebase Logo" width="220" height="301" style="height: 301px !important; width: 220px !important; box-shadow: none; border: none; background: none;">
+					<h3>Presented by Brenden Reeves</h3>
+                </section>
+
+				<section id="slide1">
+                    <section id="slide1.1">
+                        <h2>Before we get into the main topic....</h2>
+                        <p class="fragment">I'm am by no means an expert in Firebase</p>
+                    </section>
+                    <section id="slide1.2">
+                        <h2>However....</h2>
+                        <p class="fragment">Over the past year I have learned a thing or two about Firebase by using it in a project of mine that is nearing lauch.</p>
+                        <p class="fragment">So please feel free to ask questions at any point during the presention should you have any questions about the products I'm covering.</p>
+                    </section>
+                </section>
+
+                <section id="slide2">
+                    <section id="slide2.1">
+                        <h2>So what exactly is Firebase?</h2>
+                        <p>Firebase is a suite of products by Google designed to help developers focus on created user experiences and less on backend services</p>
+                    </section>
+                    <section id="slide2.2">
+                        <h3>Just about anything you can think of they offer</h3>
+                        <ul>
+                            <li>Secure Authentication</li>
+                            <li>Free* Web Hosting</li>
+                            <li>NoSQL Databasing</li>
+                            <li>Serverless Cloud Functions</li>
+                            <li>Mobile Analytics</li>
+                            <li>Machine Learning</li>
+                            <li>Cloud Messaging</li>
+                            <li>...and even more for mobile developers!</li>
+                        </ul>
+                    </section>
+                    <section id="slide2.3">
+                        <h2>So let's break it all down!</h2>
+                    </section>
+                </section>
+
+                <section id="slide3">
+                    <section id="slide3.1">
+                        <h3>But like, <span class="fragment">who is actually using it?</span></h3>
+                        <p class="fragment">Lots of people!</p>
+                    </section>
+                    <section id="slide3.2">
+                        <img src="images/NewYorkTimes.svg" height="100" /><br>
+                        <img src="images/shazam.svg" height="100" /><br>
+                        <img data-src="images/todoist.svg" height="100" style="padding: 5px; background: #fff;" /><br>
+                    </section>
+                    <section id="slide3.3">
+                        <h2>So let's break it all down!</h2>
+                    </section>
+                </section>
+
+                <section id="slide4">
+                    <section id="slide4.1">
+                        <img data-src="images/auth.svg" alt="" />
+                    </section>
+                    <section id="slid4.2">
+                        <h3>Main Features</h3>
+                        <ul>
+                            <li>Supported in any Platform</li>
+                            <li>
+                                Multiple Different Login Providers
+                                <ul>
+                                    <li>Traditional Email/Password</li>
+                                    <li>Anonymous Login</li>
+                                    <li>Google Account</li>
+                                    <li>Facebook</li>
+                                    <li>Twitter</li>
+                                    <li>Github</li>
+                                    <li>Phone Based</li>
+                                    <li>Custom Self-Hosted Authentication System</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section id="slide4.3">
+                        <h3>Main Features (cont.)</h3>
+                        <ul>
+                            <li>Prebuild Login UI Library</li>
+                            <li>Custom UI Support</li>
+                            <li>Security Backed by Google</li>
+                            <li>Easy to drop into exist project</li>
+                        </ul>
+                    </section>
+                    <section id="slide4.4">
+                        <h3>Pricing</h3>
+                        <p>100% Free with the exception of phone number authorizion which costs:</p>
+                        <table style="font-size: 30px !important;">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>US, Canada, and India</th>
+                                    <th>All other countries</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Free</td>
+                                    <td>10k/month</td>
+                                    <td>10k/month</td>
+                                </tr>
+                                <tr>
+                                    <td>Flame ($25)</td>
+                                    <td>10k/month</td>
+                                    <td>10k/month</td>
+                                </tr>
+                                <tr>
+                                    <td>Pay As You Go</td>
+                                    <td>$0.01/verification </td>
+                                    <td>$0.06/verification </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+
+                <section id="slide5">
+                    <section id="slide5.1">
+                        <img data-src="images/hosting.svg" alt="" style="box-shadow: none; border: none; background: none;" />
+                    </section>
+                    <section id="slide5.2">
+                        <h3>Main Features</h3>
+                        <ul>
+                            <li>Backed by Fast CDN Worldwide</li>
+                            <li data-aside="Setup once and forget about it">Provides free SSL Certificates</li>
+                            <li>Simple Deployment with Rollback Features</li>
+                        </ul>
+                    </section>
+                    <section id="slide5.3">
+                        <h3>But.... <span class="fragment">it doesn't support everything</span></h3>
+                        <p class="fragment">Sites running on services such as <span>PHP</span> are not supported</p>
+                    </section>
+                    <section id="slide5.4" data-background="https://media.giphy.com/media/9Y5BbDSkSTiY8/giphy.gif">
+                    </section>
+                    <section id="slide5.5">
+                        <h3>Pricing</h3>
+                        <p>As of November 5th, 2018 here is the pricing structure:</p>
+                        <table style="font-size: 30px !important;">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>GB Stored</th>
+                                    <th>Bandwidth</th>
+                                    <th>Multiple Sites Per Project</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Free</td>
+                                    <td>1GB</td>
+                                    <td>10GB</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>Flame ($25)</td>
+                                    <td>10GB</td>
+                                    <td>50GB</td>
+                                    <td>✅</td>
+                                </tr>
+                                <tr>
+                                    <td>Pay As You Go</td>
+                                    <td>$0.026/GB</td>
+                                    <td>$0.15/GB</td>
+                                    <td>✅</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+
+                <section id="slide6">
+                    <section id="slide6.1">
+                        <img data-src="images/cloud_firestore.svg" alt="" style="box-shadow: none; border: none; background: none;" />
+                    </section>
+                    <section id="slide6.2">
+                        <h3>Main Features</h3>
+                        <ul>
+                            <li>Avalible on All Platforms</li>
+                            <li>Automatic Sync Across Devices</li>
+                            <li>Offline Support by Default</li>
+                            <li>Automatic Scaling</li>
+                            <li>Security Backed by Google</li>
+                        </ul>
+                    </section>
+                    <section id="slide6.3">
+                        <h3>Pricing</h3>
+                        <p>As of November 5th, 2018 here is the pricing structure:</p>
+                        <table style="font-size: 25px !important;">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Stored data</th>
+                                    <th>Bandwidth</th>
+                                    <th>Document writes</th>
+                                    <th>Document reads</th>
+                                    <th>Document deletes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Free</td>
+                                    <td>1 GB total</td>
+                                    <td>10GB/month</td>
+                                    <td>20K/day</td>
+                                    <td>50K/day</td>
+                                    <td>20K/day</td>
+                                </tr>
+                                <tr>
+                                    <td>Flame ($25)</td>              
+                                    <td>2.5 GB total</td>
+                                    <td>20GB/month</td>
+                                    <td>100K/day</td>
+                                    <td>250K/day</td>
+                                    <td>100K/day</td>
+                                </tr>
+                                <tr>
+                                    <td>Pay As You Go</td>
+                                    <td>$0.18/GB</td>
+                                    <td>Varies</td>
+                                    <td>$0.18/100K</td>
+                                    <td>$0.06/100K</td>
+                                    <td>$0.02/100K</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+                <section id="slide7">
+                    <h1>Let's get to coding!</h1>
+                </section>
+			</div>
+        </div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
