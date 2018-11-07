@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=780">
     <title>Intro to Firebase</title>
 
     <!-- Add Base Firebase Libraries -->
@@ -38,7 +38,7 @@
             border-radius: 3px;
         }
 
-        #message h1 { font-size: 20px; }
+        #message h1 { font-size: 20px; margin-top: 0px;}
         #message h2 { font-size: 17px; }
 
         #message a {
@@ -90,17 +90,12 @@
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-01"></button>
         <div class="collapse navbar-collapse" id="navbar-collapse-01">
             <ul class="nav navbar-nav mr-auto">
-                <li><a href="slides">Slide Deck</a></li>
+                <li class="active"><a href="slides">Slide Deck</a></li>
             </ul>
-            <form class="navbar-form form-inline my-2 my-lg-0" action="#" role="search">
-                <ul class="nav navbar-nav mr-auto">
-                    <li>
-                        <img id="profile-pic" src="images/profile_placeholder.png" style="height:55px; border-radius: 30px;" />
-                    </li>
-                    <li class="active"><a id="logout" class="protected" style="display:none;">Log Out</a></li>
-                </ul>
-            </form>
         </div>
+        <form class="form-inline my-2 my-lg-0">
+            <img id="profile-pic" src="images/profile_placeholder.png" style="height:55px; border-radius: 30px;">
+        </form>
     </nav>
 
     <!-- Login Box -->
@@ -111,7 +106,7 @@
     <!-- Protected Section -->
     <div id="message" class="protected" style="display:none; margin-bottom: 20px;">
         <h1 id="welcome">Hello there {{fName}}!</h1>
-        <h4>Enjoy chatting!</h4>
+        <a id="logout" class="protected" style="display:none;">Log Out</a>
     </div>
 
     <!-- Messages Container -->
