@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=780">
+    <title>Intro to Firebase</title>
+
+    <!-- Add Base Firebase Libraries -->
+    <script defer src="/__/firebase/5.5.7/firebase-app.js"></script>
+    <script defer src="/__/firebase/5.5.7/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.5.7/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+
+    <!-- Add Firebase UI Library -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Load in our Firebase Code -->
+    <script src="index.js"></script>
+    <link type="text/css" rel="stylesheet" href="../styles.css" />
+
+    <!-- Load in FlatUI -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="flat-ui.css" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-expand-lg" role="navigation">
+        <a class="navbar-brand" href="#">Intro to Firebase</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-01"></button>
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+            <ul class="nav navbar-nav mr-auto">
+                <li class="active"><a href="slides">Slide Deck</a></li>
+            </ul>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <img id="profile-pic" src="images/profile_placeholder.png" style="height:55px; border-radius: 30px;">
+        </form>
+    </nav>
+
+    <!-- TODO: Login Box -->
+    <div id="message" class="login">
+
+    </div>
+
+    <!-- TODO: Protected Section -->
+    <div id="message" class="protected" style="display:none; margin-bottom: 20px;">
+
+    </div>
+
+    <!-- TODO: Messages Container -->
+    <div id="message" class="protected chatroom" style="display:none; margin-bottom: 30px;">
+
+    </div>
+
+</body>
+
+</html>
