@@ -5,7 +5,8 @@ var MESSAGE_TEMPLATE =
       '<div class="message" style="background-color: #70acef; color: #fff; padding: 15px 20px; max-width: 400px; border-radius: 10px;"></div>' +
       '<div class="name" style="padding: 5px 10px 0px 5px;"></div>' +
     '</div>';
-var messageListElement;
+var messages;
+var initalLoad = true;
 
 // Initializes Page
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         timestampsInSnapshots: true
     });
     firebase.auth().onAuthStateChanged(authStateObserver);
-    messageListElement = document.getElementById('chat-messages');
+    messages = document.getElementById('chat-messages');
     document.getElementById('message-form').addEventListener('submit', sendMessage);
 
     //Setup Login/Logout Buttons
@@ -89,14 +90,19 @@ function loadMessages() {
         .onSnapshot(function(snapshot) {
             console.log("snapshot found", snapshot)
             snapshot.forEach(function(msg) {
-                console.log(msg.id, msg.data())
-                displayMessage(msg.id, msg.data().name, msg.data().message)
+                console.log(msg.id, msg.data(), msg.data().uid)
+                displayMessage(msg.id, msg.data().name, msg.data().message, msg.data().uid)
             })
+            if(!initalLoad){
+                window.scrollTo(0,document.body.scrollHeight);
+            } else {
+                initalLoad = false;
+            }
         });
 }
 
 // Some Example Firebase Stuff
-function displayMessage(key, name, text) {
+function displayMessage(key, name, text, uid) {
     var div = document.getElementById(key);
     // If an element for that message does not exists yet we create it.
     if (!div) {
@@ -104,7 +110,7 @@ function displayMessage(key, name, text) {
         container.innerHTML = MESSAGE_TEMPLATE;
         div = container.firstChild;
         div.setAttribute('id', key);
-        messageListElement.appendChild(div);
+        messages.appendChild(div);
     }
     div.querySelector('.name').textContent = "— " + name;
     var messageElement = div.querySelector('.message');
@@ -113,8 +119,9 @@ function displayMessage(key, name, text) {
         // Replace all line breaks by <br>.
         messageElement.innerHTML = messageElement.innerHTML.replace(/\n/g, '<br>');
     }
-    // Show the card fading-in and scroll to view the new message.
-    setTimeout(function() {
-        div.classList.add('visible')
-    }, 1);
+    if(uid == firebase.auth().currentUser.uid){
+        div.classList.add("myMessage");
+    }
+
+
 }
