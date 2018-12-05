@@ -8,10 +8,12 @@ import android.widget.TextView;
 
 public class ChatHolder extends RecyclerView.ViewHolder {
 
+    // ViewHolder Items
     public final TextView message;
     public final TextView author;
     public final CardView card;
 
+    // ViewHolder Constructor
     public ChatHolder(@NonNull View itemView) {
         super(itemView);
         message = itemView.findViewById(R.id.msg);

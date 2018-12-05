@@ -1,7 +1,6 @@
 package xyz.brenden.firebase101;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.google.firebase.auth.FirebaseAuth;

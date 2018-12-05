@@ -2,11 +2,13 @@ package xyz.brenden.firebase101;
 
 public class FriendlyMessage {
 
+    // Properties
     private String uid;
     private String message;
     private String name;
     private long time;
 
+    // Constructors
     public FriendlyMessage() {
     }
 
@@ -18,6 +20,7 @@ public class FriendlyMessage {
         this.time = time;
     }
 
+    // Getters & Setters
     public String getUid() {
         return uid;
     }
