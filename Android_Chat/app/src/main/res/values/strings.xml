@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Firebase101</string>
+    <string name="title_activity_login_screen">Account Login</string>
+    <string name="no_internet_connection">Please connect to the internet</string>
+    <string name="unknown_error">An unknown error has occurred</string>
+    <string name="sign_in_cancelled">User sign in canceled</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+</resources>
