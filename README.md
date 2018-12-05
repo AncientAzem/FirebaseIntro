@@ -10,8 +10,8 @@ You can do one of two things. A) Fireup the android app by opening the `Android_
 
 Previous talks can be view online at the following links:
 
-* [Android App](https://play.google.com/store/apps/details?id=xyz.brenden.firebase101) - Coming Soon!
-* [Web App](https://firebase.brenden.xyz/intro/) - Coming Soon!
+* [Android Talk](https://play.google.com/store/apps/details?id=xyz.brenden.firebase101) - Coming Soon!
+* [Web App Talk](https://firebase.brenden.xyz/intro/) - Coming Soon!
 
 ## Live Demos
 
