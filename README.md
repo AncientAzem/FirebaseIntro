@@ -6,7 +6,14 @@ Over the years Firebase has grown from a small database solution to a massive su
 
 You can do one of two things. A) Fireup the android app by opening the `Android_Chat` folder in Android studio, or B) load up the demo located at `/public/intro/`.
 
-# Live Demos
+## Talk Recordings
+
+Previous talks can be view online at the following links:
+
+* [Android App](https://play.google.com/store/apps/details?id=xyz.brenden.firebase101) - Coming Soon!
+* [Web App](https://firebase.brenden.xyz/intro/) - Coming Soon!
+
+## Live Demos
 
 You can preview finished versions from within the app as well as online at the following sites:
 
